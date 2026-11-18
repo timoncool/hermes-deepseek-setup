@@ -8,23 +8,24 @@
 2. Откройте [кабинет DeepSeek](https://platform.deepseek.com/), пополните API-баланс через **Top up** и создайте ключ в **API keys**.
 3. В Hermes нажмите шестерёнку справа сверху. В **Провайдеры → API-ключи → DeepSeek** вставьте ключ и нажмите **Сохранить**. В **Модель → Основная модель** выберите **DeepSeek → deepseek-flash**, нажмите **Применить**, откройте новый сеанс и дождитесь ответа на «Привет!».
 
-## Установка скилла
+## Как запустить
 
-Откройте чат Hermes после того, как DeepSeek ответил. Отправьте ссылку на этот репозиторий и попросите установить скилл:
+Как только DeepSeek ответит в Hermes, отправьте туда **одну ссылку на этот репозиторий**.
 
-```text
-Установи скилл из https://github.com/timoncool/hermes-deepseek-setup
-```
+https://github.com/timoncool/hermes-deepseek-setup
 
-Когда Hermes подтвердит установку, откройте новый сеанс и отправьте `/hermes-deepseek-setup`.
+Hermes установит скилл и начнёт настройку в этом же чате.
 
-Если хочется самому вызвать установку, эту команду тоже можно отправить прямо в чат Hermes:
+<details>
+<summary>Инструкция для Hermes Agent</summary>
 
-```text
-/skills install https://raw.githubusercontent.com/timoncool/hermes-deepseek-setup/main/SKILL.md
-```
+Если пользователь прислал ссылку на этот репозиторий без текста, это вход в мастер настройки. Если он явно задал другой вопрос о репозитории, ответь на вопрос.
 
-Ещё можно [скачать ZIP](https://github.com/timoncool/hermes-deepseek-setup/archive/refs/heads/main.zip) и распаковать папку со `SKILL.md` в `%LOCALAPPDATA%\hermes\skills` на Windows или в `~/.hermes/skills` на macOS, Linux и WSL. Назовите папку `hermes-deepseek-setup` и откройте новый сеанс.
+1. Проверь, доступен ли скилл `hermes-deepseek-setup`. Если его нет, используй штатный установщик Hermes. Вызови из инструмента терминала `hermes skills install https://raw.githubusercontent.com/timoncool/hermes-deepseek-setup/main/SKILL.md` для профиля, в котором идёт этот чат. Сохрани штатную проверку скилла. Если Hermes покажет запрос подтверждения, дождись подтверждения в интерфейсе.
+2. Загрузи `skill_view("hermes-deepseek-setup")` в текущем сеансе. Если после установки индекс ещё не обновился, прочитай установленный `SKILL.md` прямо с диска. Если инструмент установки недоступен, прочитай [исходный SKILL.md](https://raw.githubusercontent.com/timoncool/hermes-deepseek-setup/main/SKILL.md) и проведи настройку здесь, указав, что скилл не сохранён на диск.
+3. Сразу выполни первый шаг скилла в этом же разговоре. Начни с первого вопроса по-русски. Не проси пользователя открыть терминал, вызвать слэш-команду или начать новый сеанс.
+
+</details>
 
 ## Что произойдёт после запуска
 
