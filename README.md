@@ -10,19 +10,21 @@
 
 ## Установка скилла
 
-В терминале на компьютере, где работает Hermes, выполните:
+Откройте чат Hermes после того, как DeepSeek ответил. Отправьте ссылку на этот репозиторий и попросите установить скилл:
 
 ```text
-hermes skills install https://raw.githubusercontent.com/timoncool/hermes-deepseek-setup/main/SKILL.md
+Установи скилл из https://github.com/timoncool/hermes-deepseek-setup
 ```
 
-Откройте новый сеанс Hermes и отправьте:
+Когда Hermes подтвердит установку, откройте новый сеанс и отправьте `/hermes-deepseek-setup`.
+
+Если хочется самому вызвать установку, эту команду тоже можно отправить прямо в чат Hermes:
 
 ```text
-/hermes-deepseek-setup
+/skills install https://raw.githubusercontent.com/timoncool/hermes-deepseek-setup/main/SKILL.md
 ```
 
-Если терминал неудобен, [скачайте ZIP репозитория](https://github.com/timoncool/hermes-deepseek-setup/archive/refs/heads/main.zip), распакуйте и переместите папку со `SKILL.md` в `%LOCALAPPDATA%\hermes\skills` на Windows или в `~/.hermes/skills` на macOS, Linux и WSL. Назовите папку `hermes-deepseek-setup`. Если у вас свой `HERMES_HOME`, используйте его папку `skills`. Если команда ещё не появилась, введите `/reload-skills` и откройте новый сеанс.
+Ещё можно [скачать ZIP](https://github.com/timoncool/hermes-deepseek-setup/archive/refs/heads/main.zip) и распаковать папку со `SKILL.md` в `%LOCALAPPDATA%\hermes\skills` на Windows или в `~/.hermes/skills` на macOS, Linux и WSL. Назовите папку `hermes-deepseek-setup` и откройте новый сеанс.
 
 ## Что произойдёт после запуска
 
