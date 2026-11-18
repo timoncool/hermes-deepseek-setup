@@ -31,3 +31,9 @@ Hermes задаст несколько простых вопросов. Назо
 Можно принести правила из предыдущего агента. Скилл покажет, что предлагает перенести, и выполнит выбранный перенос. Провайдер, ключи и настройки других профилей без вашего решения остаются прежними.
 
 [Документация Hermes о скиллах](https://hermes-agent.nousresearch.com/docs/guides/work-with-skills/) · [Команды Hermes](https://hermes-agent.nousresearch.com/docs/reference/cli-commands/) · [Подключение DeepSeek](https://api-docs.deepseek.com/quick_start/agent_integrations/hermes/)
+
+## Как устроен скилл
+
+- У [онбординга OpenClaw](https://github.com/openclaw/openclaw/blob/main/docs/start/onboarding-overview.md) взял порядок: сначала рабочая модель, потом персонализация.
+- У [NVIDIA NemoClaw User Guide](https://github.com/nvidia/skills/blob/main/skills/nemoclaw-user-guide/SKILL.md) взял один вопрос за раз и запуск согласованных команд самим агентом. Шаги, требующие действий человека, показаны отдельно, как в [Hermes Setup Wizard Generator](https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/skills/optional/devops/devops-setup-wizard-generator.md).
+- По примеру [Research Paper Writing для Hermes](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/research/research-paper-writing/SKILL.md) подключения подбираются под этап и задачу. Здесь это один небольшой набор под первую рабочую пробу.
